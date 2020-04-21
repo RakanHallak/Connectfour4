@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "373174757170",
+    "firebase_url": "https://connectfour-6666f.firebaseio.com",
+    "project_id": "connectfour-6666f",
+    "storage_bucket": "connectfour-6666f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373174757170:android:32bf0ce798f2d2cd8b592b",
+        "android_client_info": {
+          "package_name": "com.example.connectfour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373174757170-of1hhnbcv1a862pjkl6mgjtl4qq6gcq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7h0TK6O36EGcgIgrTaq47EhMk1bOfsWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373174757170-of1hhnbcv1a862pjkl6mgjtl4qq6gcq5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
