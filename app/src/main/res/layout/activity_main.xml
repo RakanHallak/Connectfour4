@@ -4,44 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarmainscreen"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="1dp"
         android:background="#1B5E20"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:title="ConnectFour"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="4dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="ConnectFour" />
 
     <Button
         android:id="@+id/startgamebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="23dp"
+        android:onClick="clickstartgame"
         android:text="Start Game"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="251dp" />
+        app:layout_constraintBottom_toTopOf="@+id/playersearchbtn"
+        app:layout_constraintEnd_toEndOf="@+id/playersearchbtn" />
 
     <Button
         android:id="@+id/quitbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:onClick="clickquit"
         android:text="Quit Game"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="396dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playersearchbtn" />
 
     <Button
         android:id="@+id/playersearchbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="322dp"
+        android:onClick="clickplayersearch"
         android:text="Search Player"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="322dp" />
+        app:layout_constraintStart_toStartOf="@+id/quitbtn"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
