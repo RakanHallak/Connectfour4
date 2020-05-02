@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerConnect">
+
+    <TextView
+        android:id="@+id/tvplayernotfound"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:text="Player Not Found"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/searchbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvplayerfound" />
+
+    <TextView
+        android:id="@+id/tvsearchplayer"
+        android:layout_width="246dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="47dp"
+        android:text="Searching For Players"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pbsearchplayer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="85dp"
+        android:background="#1B5E20"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/tvsearchplayer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="ConnectFour" />
+
+    <ProgressBar
+        android:id="@+id/pbsearchplayer"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginEnd="191dp"
+        android:layout_marginBottom="75dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tvplayerfound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvsearchplayer"
+        app:layout_constraintTop_toBottomOf="@+id/tvsearchplayer" />
+
+    <TextView
+        android:id="@+id/tvplayerfound"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:text="Player Found"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tvplayernotfound"
+        app:layout_constraintEnd_toEndOf="@+id/tvplayernotfound"
+        app:layout_constraintStart_toStartOf="@+id/tvplayernotfound"
+        app:layout_constraintTop_toBottomOf="@+id/pbsearchplayer" />
+
+    <Button
+        android:id="@+id/searchbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="206dp"
+        android:text="Search"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvplayernotfound" />
+</androidx.constraintlayout.widget.ConstraintLayout>
