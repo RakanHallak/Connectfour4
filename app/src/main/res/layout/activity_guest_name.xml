@@ -9,12 +9,12 @@
     tools:context=".GuestName">
 
     <EditText
-        android:id="@+id/etguestname"
+        android:id="@+id/etplayer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Guest Name"
+        android:text="Player 1:"
         android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="109dp"
         tools:layout_editor_absoluteY="82dp" />
@@ -25,5 +25,5 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="157dp" />
+        tools:layout_editor_absoluteY="227dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
