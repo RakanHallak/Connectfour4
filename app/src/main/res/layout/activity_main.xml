@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_dark"
+    android:background="@android:color/black"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -26,36 +26,24 @@
         android:id="@+id/startgamebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="251dp"
         android:onClick="clickstartgame"
         android:text="Start Game"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/playersearchbtn"
-        app:layout_constraintEnd_toEndOf="@+id/playersearchbtn" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/quitbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="18dp"
         android:onClick="clickquit"
         android:text="Quit Game"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playersearchbtn" />
-
-    <Button
-        android:id="@+id/playersearchbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="322dp"
-        android:onClick="clickplayersearch"
-        android:text="Search Player"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/quitbtn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/startgamebtn"
+        app:layout_constraintTop_toBottomOf="@+id/startgamebtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
