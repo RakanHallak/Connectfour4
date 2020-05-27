@@ -6,86 +6,342 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_row="4"
+    android:background="#FFF3F3"
+    android:backgroundTint="#000000"
     tools:context=".Gameplay">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#1B5E20"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Connect Four" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="50dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:srcCompat="@drawable/connect4board" />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="516dp"
-        app:layout_constraintBottom_toTopOf="@+id/viewscorebtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar4">
-
-        <TextView
-            android:id="@+id/tvplayer"
-            android:layout_width="131dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/tvplayer1"
-            android:layout_marginLeft="154dp"
-            android:layout_marginBottom="-2dp"
-            android:layout_toRightOf="@id/tvplayer1"
-            android:text="Player2:"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/tvscore"
-            android:layout_width="73dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="false"
-            android:text="Scores"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/tvplayer1"
-            android:layout_width="131dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/tvscore"
-            android:layout_marginBottom="-46dp"
-            android:text="Player1:"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-
-    </RelativeLayout>
 
     <Button
         android:id="@+id/viewscorebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="previewscore"
         android:text="View Scores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gamelayout"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <TextView
+        android:id="@+id/p1tv"
+        android:layout_width="114dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:hint="Player 1:"
+        android:textColor="#F8F5F5"
+        android:textColorHint="#EADCDC"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/gamelayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <TextView
+        android:id="@+id/p2tv"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        android:hint="Player 2:"
+        android:textColor="#ECE8E8"
+        android:textColorHint="#ECDFDF"
+        app:layout_constraintBottom_toTopOf="@+id/gamelayout"
+        app:layout_constraintEnd_toStartOf="@+id/yellow2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
+
+    <ImageView
+        android:id="@+id/red2"
+        android:layout_width="30dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/gamelayout"
+        app:layout_constraintEnd_toStartOf="@+id/p2tv"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toEndOf="@+id/p1tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        app:srcCompat="@drawable/red2" />
+
+    <ImageView
+        android:id="@+id/yellow2"
+        android:layout_width="27dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/gamelayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862"
+        app:srcCompat="@drawable/yellow2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="16dp"
+        android:text="Play Again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.788"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gamelayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableLayout
+        android:id="@+id/gamelayout"
+        android:layout_width="353dp"
+        android:layout_height="344dp"
+        android:scrollbarSize="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="4dp">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="41dp"
+                android:layout_height="75dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="48dp"
+                android:layout_height="75dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="56dp"
+                android:layout_height="73dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="43dp"
+                android:layout_height="77dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="50dp"
+                android:layout_height="73dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv6"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv7"
+                android:layout_width="54dp"
+                android:layout_height="match_parent"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv8"
+                android:layout_width="54dp"
+                android:layout_height="70dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv9"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv10"
+                android:layout_width="50dp"
+                android:layout_height="67dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv11"
+                android:layout_width="53dp"
+                android:layout_height="65dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv12"
+                android:layout_width="49dp"
+                android:layout_height="70dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv13"
+                android:layout_width="46dp"
+                android:layout_height="64dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv14"
+                android:layout_width="48dp"
+                android:layout_height="65dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv15"
+                android:layout_width="37dp"
+                android:layout_height="62dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv16"
+                android:layout_width="33dp"
+                android:layout_height="65dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv17"
+                android:layout_width="48dp"
+                android:layout_height="65dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv18"
+                android:layout_width="39dp"
+                android:layout_height="match_parent"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv19"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv20"
+                android:layout_width="43dp"
+                android:layout_height="63dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv21"
+                android:layout_width="42dp"
+                android:layout_height="61dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv22"
+                android:layout_width="46dp"
+                android:layout_height="66dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv23"
+                android:layout_width="46dp"
+                android:layout_height="64dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv24"
+                android:layout_width="50dp"
+                android:layout_height="66dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv25"
+                android:layout_width="56dp"
+                android:layout_height="64dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv26"
+                android:layout_width="56dp"
+                android:layout_height="65dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv27"
+                android:layout_width="53dp"
+                android:layout_height="64dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv28"
+                android:layout_width="59dp"
+                android:layout_height="65dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv29"
+                android:layout_width="59dp"
+                android:layout_height="65dp"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/iv30"
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                android:onClick="ivClick"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+        </TableRow>
+
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

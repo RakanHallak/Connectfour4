@@ -7,27 +7,12 @@
     android:background="@android:color/black"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarmainscreen"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="1dp"
-        android:background="#1B5E20"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="ConnectFour" />
-
     <Button
         android:id="@+id/startgamebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="145dp"
+        android:layout_height="52dp"
         android:layout_marginTop="251dp"
-        android:onClick="clickstartgame"
+        android:onClick="clickstart"
         android:text="Start Game"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,14 +21,39 @@
 
     <Button
         android:id="@+id/quitbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="18dp"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
         android:onClick="clickquit"
         android:text="Quit Game"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/startgamebtn"
+        app:layout_constraintTop_toBottomOf="@+id/startgamebtn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="Connect Four"
+        android:textColor="#F30000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/startgamebtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="151dp"
+        android:layout_height="61dp"
+        android:onClick="clickhelp"
+        android:text="Instructions"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/quitbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startgamebtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

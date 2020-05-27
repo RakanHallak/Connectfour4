@@ -10,20 +10,59 @@
 
     <EditText
         android:id="@+id/etplayer1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="132dp"
         android:ems="10"
+        android:hint="Player1"
         android:inputType="textPersonName"
-        android:text="Player 1:"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="82dp" />
+        android:textColorHint="#E31E1E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/etplayer2"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Player2"
+        android:inputType="textPersonName"
+        android:textColor="#E8E4E4"
+        android:textColorHint="#E31F1F"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etplayer1"
+        app:layout_constraintVertical_bias="0.046" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="227dp" />
+        android:layout_marginBottom="220dp"
+        android:onClick="gnsubmit"
+        android:text="Play Now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="366dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="Please enter player names below"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

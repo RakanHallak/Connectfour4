@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class ViewScores : AppCompatActivity() {
+class Help : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view_scores)
+        setContentView(R.layout.activity_help)
     }
-    fun backtogameplay(view: View){
-        val playersearch = Intent(this,Gameplay::class.java)
+    fun clickgoback(view: View){
+        val playersearch = Intent(this,MainActivity::class.java)
         startActivity(playersearch)
     }
 }

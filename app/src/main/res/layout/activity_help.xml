@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Help">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="374dp"
+        android:layout_height="161dp"
+        android:text="This game is played on a vertical board wich has seven hollow columns and six rows. Each column has a hole in the upper part of the board, where pieces are introduced. There is a window for every square, so that pieces can be seen from both sides.  In short, it´s a vertical board with 42 windows distributed in 6 rows and 7 columns.  Both players have a set of 21 thin pieces (like coins); each of them uses a different colour. The board is empty at the start of the game."
+        android:textColor="#F6F5F5"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="377dp"
+        android:layout_height="66dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:shadowColor="#F41818"
+        android:text="Here are some instructions on how to play the game"
+        android:textColor="#F11111"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115"
+        tools:layout_editor_absoluteX="13dp" />
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="111dp"
+        android:layout_height="28dp"
+        android:text="Description"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Objective"
+        android:textColor="#FBF0F0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="379dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="12dp"
+        android:text="The aim for both players is to make a straight line of four own pieces; the line can be vertical, horizontal or diagonal."
+        android:textColor="#F1EAEA"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="194dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="12dp"
+        android:text="How the game goes on"
+        android:textColor="#FFFCFC"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="379dp"
+        android:layout_height="157dp"
+        android:text="Before starting, players decide randomly which of them will be the beginner; moves are made alternatively, one by turn.  Moves entails in placing new pieces on the board; pieces slide downwards from upper holes, falling down to the last row or piling up on the last piece introduced in the same column. So, in every turn the introduced piece may be placed at most on seven different squares.  The winner is the first player who gets a straight line made with four own pieces and no gaps between them."
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="147dp"
+        android:layout_height="62dp"
+        android:onClick="clickgoback"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

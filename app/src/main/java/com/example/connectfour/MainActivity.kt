@@ -11,12 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-    fun clickstartgame(view:View){
-            val gameplay = Intent(this,Gameplay::class.java)
-            startActivity(gameplay)
+    fun clickstart(view:View){
+            val intent = Intent(this,GuestName::class.java)
+            startActivity(intent)
     }
-    fun clickplayersearch(view:View){
-        val playersearch = Intent(this,PlayerConnect::class.java)
+    fun clickhelp(view:View){
+        val playersearch = Intent(this,Help::class.java)
         startActivity(playersearch)
     }
     fun clickquit(view:View){
