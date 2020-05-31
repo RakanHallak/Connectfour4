@@ -12,11 +12,6 @@ class ViewScores : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_scores)
-       /* val intent3 = getIntent()
-        val playername1  = intent3.getStringExtra("p1name")
-        val playername2 = intent3.getStringExtra("p2name")
-        tvp1.text="$playername1"
-        tvp2.text="$playername2"*/
         val intent2 = getIntent()
        val scoreplayer1  = intent2.getIntExtra("p1", 0)
        val scoreplayer2 = intent2.getIntExtra("p2", 0)

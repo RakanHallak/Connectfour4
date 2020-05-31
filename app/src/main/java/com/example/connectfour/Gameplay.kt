@@ -24,14 +24,7 @@ class Gameplay : AppCompatActivity() {
         val p2name: String = intent2.getStringExtra("p2name")
         p1tv.text = "$p1name"
         p2tv.text = "$p2name"
-        // collect data from edit text
-//        val sp1= counter1(scorePlayer1)
-//        val sp2 = counter2(scorePlayer2)
-//        // start activity and pass data
-//        val spintent = Intent(this, ViewScores::class.java)
-//        intent.putExtra("sp1",sp1)
-//        intent.putExtra("sp2",sp2)
-//        startActivity(spintent)
+
     }
 
     // Takes user to the ViewScores activity
@@ -493,13 +486,5 @@ class Gameplay : AppCompatActivity() {
 
     }
 
-//    fun counter1 (scoreplayer1:Int):Int{
-//        return scorePlayer1
-//
-//    }
-//    fun counter2 (scorePlayer2:Int):Int{
-//        return scorePlayer2
-//
-//    }
 }
 
