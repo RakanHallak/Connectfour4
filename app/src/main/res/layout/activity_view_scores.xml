@@ -8,46 +8,58 @@
     tools:context=".ViewScores">
 
     <TextView
-        android:id="@+id/p1scores2"
-        android:layout_width="184dp"
-        android:layout_height="335dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvp2"
-        app:layout_constraintVertical_bias="0.187"
-        tools:layout_editor_absoluteX="211dp" />
-
-    <TextView
         android:id="@+id/tvp2"
         android:layout_width="173dp"
         android:layout_height="34dp"
         android:text="Player 2:"
         android:textColor="#F41818"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintBottom_toTopOf="@+id/score2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907" />
+
+    <TextView
+        android:id="@+id/score1"
+        android:layout_width="118dp"
+        android:layout_height="144dp"
+        android:layout_marginEnd="88dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/score2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298" />
 
     <TextView
         android:id="@+id/tvp1"
         android:layout_width="170dp"
         android:layout_height="36dp"
+        android:layout_marginEnd="33dp"
         android:text="Player 1:"
         android:textColor="#F11616"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintBottom_toTopOf="@+id/score1"
+        app:layout_constraintEnd_toStartOf="@+id/tvp2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.767" />
 
     <TextView
-        android:id="@+id/p1scores"
-        android:layout_width="179dp"
-        android:layout_height="336dp"
-        android:layout_marginTop="48dp"
+        android:id="@+id/score2"
+        android:layout_width="142dp"
+        android:layout_height="154dp"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/p1scores2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvp1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
 
     <Button
         android:id="@+id/back2game"
@@ -55,11 +67,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:onClick="backtogameplay"
-        android:text="Back"
+        android:text="Back to HomePage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.972" />
 
     <TextView
         android:id="@+id/textView6"
@@ -70,8 +84,9 @@
         android:text="Scores"
         android:textColor="#ED0303"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,15 +11,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+    // Takes to GuestName activity
     fun clickstart(view:View){
             val intent = Intent(this,GuestName::class.java)
             startActivity(intent)
     }
+    // Takes to Help activity
     fun clickhelp(view:View){
         val playersearch = Intent(this,Help::class.java)
         startActivity(playersearch)
     }
-    fun clickquit(view:View){
+    // Exits the application
+    fun quitapp(view:View){
         super.onDestroy()
     }
 }

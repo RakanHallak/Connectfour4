@@ -24,7 +24,7 @@
         android:layout_width="145dp"
         android:layout_height="50dp"
         android:layout_marginTop="84dp"
-        android:onClick="clickquit"
+        android:onClick="quitapp"
         android:text="Quit Game"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/startgamebtn"

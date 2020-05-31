@@ -11,6 +11,7 @@ class Help : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_help)
     }
+    // Takes you back to MainActivity
     fun clickgoback(view: View){
         val playersearch = Intent(this,MainActivity::class.java)
         startActivity(playersearch)
